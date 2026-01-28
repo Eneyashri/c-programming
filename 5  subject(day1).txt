@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int marks,S1,S2,S3,S4,S5;
+    printf("Enter the mark of S1:");
+    scanf("%d",&S1);
+    printf("Enter the mark of S2:");
+    scanf("%d",&S2);
+    printf("Enter the mark of S3:");
+    scanf("%d",&S3);
+    printf("Enter the mark of S4:");
+    scanf("%d",&S4);
+    printf("Enter the mark of S5:");
+    scanf("%d",&S5);
+    marks = S1+S2+S3+S4+S5;
+    printf("The total marks:%d",marks);
+    return 0;
+}

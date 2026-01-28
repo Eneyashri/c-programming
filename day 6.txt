@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+#include <string.h>
+struct structure {
+    int reg;
+    char name[9];
+    int marks;
+};
+int main(){
+    struct structure stru1;
+    stru1.reg=0001;
+    strcpy(stru1.name,"Arun");
+    stru1.marks=450;
+    printf("The Reg no is: %d\n",stru1.reg);
+    printf("The name is: %s\n",stru1.name);
+    printf("The mark is: %d\n",stru1.marks);
+    
+
+    return 0;
+}

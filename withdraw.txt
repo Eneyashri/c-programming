@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int b = 10000;
+    int w = 1000;
+    int total;
+    if(b > 1000)
+{
+    total = b - w;
+    printf("Balance After Transaction = %d", total);
+}
+else 
+   printf("You dont have a sufficient balance");
+}

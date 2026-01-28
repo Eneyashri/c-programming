@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+struct structure {
+    int ID;
+    int salary;
+};
+struct structure stru1;
+struct structure stru2;
+struct structure stru3;
+
+int main(){
+stru1.ID=24013;
+stru1.salary=2000000;
+
+stru2.ID=24012;
+stru2.salary=2000;
+
+stru3.ID=24011;
+stru3.salary=3000;
+printf("The ID is: %d\n",stru1.ID);
+printf("The Salary is: %d\n",stru1.salary);
+printf("The ID is: %d\n",stru2.ID);
+printf("The Salary is: %d\n",stru2.salary);
+printf("The ID is: %d\n",stru3.ID);
+printf("The Salary is: %d\n",stru3.salary);
+
+return 0;
+}

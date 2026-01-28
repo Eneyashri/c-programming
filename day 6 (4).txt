@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdio.h>
+struct structure{
+long int mobileno;
+int rechargeamount;
+};
+int main(){
+    struct structure stru1;
+    
+    stru1.mobileno=7917108466;
+    stru1.rechargeamount=1000;
+    
+    printf("The mobile no is: %ld\n",stru1.mobileno);
+    printf("The recharge amount is: %d\n",stru1.rechargeamount);
+    
+    return 0;
+}

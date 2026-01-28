@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int username,Pin,pin,a;
+    username = a;
+    pin = 1234;
+    int success = 0;
+    for(int i=0;i<3;i++){
+        printf("Enter the pin:");
+        scanf("%d",&pin);
+        if(Pin == pin){
+            printf("Do your Transaction");
+            return 0;
+        }
+        else{
+            if(i<2)
+            printf("Retry\n");
+        }
+    }
+    printf("Your card is blocked");
+    return 0;
+}

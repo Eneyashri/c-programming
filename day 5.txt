@@ -1,0 +1,128 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int n, i;
+    int *array;
+    int sum =0;
+    //get length
+    printf("Enter the number of element:");
+    scanf("%d", &n);
+    //memory allocation
+    array = (int*) calloc(n ,sizeof(int));
+    //validation
+    if(array == NULL){
+        printf("Memory not allocated \n");
+        return 0;
+    }
+    else{
+        printf("Memory allocated and the allocated memory is %d \n");
+        for(i=0; i<n; i++)
+        scanf("%d",&array[i]);
+        sum +=array[i];
+    }
+    printf("The sum of all elements is : %d \n", sum);
+    //destroy the memory
+    free(array);
+    printf("Memory deleted successfully");
+    return 0;
+    
+} 
+#include <stdio.h>
+int main() {
+    int numbers[5]={0,1,2,3,4};
+    int *point = numbers;
+    
+    printf("%d \n", *point); //numbers[0]
+    printf("%d \n", *(point +1));
+    point++;
+    printf("%d \n", *point);
+    point--;
+    printf("%d \n", *point);
+    point+=2;
+    printf("%d \n", *point);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *arr;
+    int n, new_n, i;
+
+    // Initial size
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    // Allocate memory using calloc
+    arr = (int *)calloc(n, sizeof(int));
+
+    // Check allocation
+    if (arr == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+
+    // Input values
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // New size
+    printf("Enter new size: ");
+    scanf("%d", &new_n);
+
+    // Reallocate memory using realloc
+    arr = (int *)realloc(arr, new_n * sizeof(int));
+
+    // Check reallocation
+    if (arr == NULL) {
+        printf("Memory reallocation failed!\n");
+        return 1;
+    }
+
+    // If size increased, take new values
+    if (new_n > n) {
+        printf("Enter %d more elements:\n", new_n - n);
+        for (i = n; i < new_n; i++) {
+            scanf("%d", &arr[i]);
+        }
+    }
+
+    // Display final array
+    printf("Final array elements:\n");
+    for (i = 0; i < new_n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    // Free memory
+    free(arr);
+
+    return 0;
+}Enter number of elements: 1
+Enter 1 elements:
+23
+Enter new size: 2
+Enter 1 more elements:
+56
+Final array elements:
+23 56
+
+#include <stdio.h>
+
+int main() {
+    int number = 10;
+    int *point = &number;
+    int **secondpoint = &point;
+    
+    printf("%d \n",number); // to show the value of var
+    
+    printf("%p \n", *point); // to show the address of pointer
+    printf("%d \n", *point); // to show the value of pointer
+    
+    printf("%p \n", secondpoint); // to show the address of second pointer
+    printf("%d \n", **secondpoint); // to show the value of second pointer
+    
+    return 0;
+}
