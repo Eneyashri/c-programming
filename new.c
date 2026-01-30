@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int balance;
+    int withdraw;
+    int total;
+    printf("Enter the value obalance:");
+    scanf("%d",&balance);
+    printf("Enter the value of withdraw:");
+    scanf("%d",&withdraw);
+    if(balance > withdraw)
+{
+    total = balance - withdraw;
+    printf("Balance After Transacation = %d", total);
+}
+  else
+  printf("You dont have a sufficient balance");
+}
