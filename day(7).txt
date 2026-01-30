@@ -1,0 +1,24 @@
+ #include<stdio.h>
+#include<stdlib.h>
+struct rollnumber{
+    int number;
+    struct rollnumber *next;
+};
+int main(){
+    struct rollnumber num1 = (struct rollnumber)malloc(sizeof(struct rollnumber));
+    struct rollnumber num2 = (struct rollnumber)malloc(sizeof(struct rollnumber));
+    struct rollnumber num3 = (struct rollnumber)malloc(sizeof(struct rollnumber));
+    scanf("%d %d %d",&num1->number,&num2->number,&num3->number);
+    num1->next = num2;
+    num2->next = num3;
+    num3->next = NULL;
+    
+    struct rollnumber *head = num1;
+    while(head!=NULL){
+    printf("%d->",head->number);
+    head = head->next;
+    }
+    printf("NULL");
+    return 0;
+}
+
